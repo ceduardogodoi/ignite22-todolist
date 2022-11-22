@@ -1,20 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Image, View, StatusBar, SafeAreaView } from 'react-native'
+import { AddTodo } from './src/components/AddTodo'
+import { styles } from './styles'
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+    <>
+      <StatusBar
+        barStyle="light-content"
+        backgroundColor="transparent"
+        translucent
+      />
+      
+      <SafeAreaView style={styles.container}>
+        <View style={styles.content}>
+          <View style={styles.logoContainer}>
+            <Image source={require('./assets/logo.png')} />
+          </View>
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+          <AddTodo />
+        </View>
+      </SafeAreaView>
+    </>
+  )
+}
