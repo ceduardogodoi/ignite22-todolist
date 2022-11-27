@@ -1,6 +1,7 @@
-import { Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Image, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { colors } from '../../theme/colors'
 import { styles } from './styles'
+import plusImg from '@assets/plus.png'
 
 export function AddTodo() {
   return (
@@ -13,11 +14,7 @@ export function AddTodo() {
       <TouchableOpacity
         style={styles.button}
       >
-        <Text
-          style={styles.buttonText}
-        >
-          +
-        </Text>
+        <Image source={plusImg} />
       </TouchableOpacity>
     </View>
   )

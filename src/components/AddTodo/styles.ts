@@ -27,8 +27,4 @@ export const styles = StyleSheet.create({
     padding: 18,
     backgroundColor: colors['blue-dark'],
   },
-  buttonText: {
-    color: colors.gray100,
-    fontSize: 16,
-  },
 })

@@ -1,5 +1,6 @@
 import { Image, View, StatusBar, SafeAreaView } from 'react-native'
 import { AddTodo } from '@components/AddTodo'
+import { TodoList } from '@components/TodoList'
 import logoImg from '@assets/logo.png'
 import { styles } from './styles'
 
@@ -19,6 +20,7 @@ export default function App() {
           </View>
 
           <AddTodo />
+          <TodoList />
         </View>
       </SafeAreaView>
     </>
