@@ -1,5 +1,6 @@
 import { Image, View, StatusBar, SafeAreaView } from 'react-native'
-import { AddTodo } from './src/components/AddTodo'
+import { AddTodo } from '@components/AddTodo'
+import logoImg from '@assets/logo.png'
 import { styles } from './styles'
 
 export default function App() {
@@ -14,7 +15,7 @@ export default function App() {
       <SafeAreaView style={styles.container}>
         <View style={styles.content}>
           <View style={styles.logoContainer}>
-            <Image source={require('./assets/logo.png')} />
+            <Image source={logoImg} />
           </View>
 
           <AddTodo />
