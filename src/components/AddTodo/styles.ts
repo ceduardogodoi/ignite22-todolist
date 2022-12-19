@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   textInput: {
-    height: 52,
+    height: 58,
     flex: 1,
     marginRight: 4,
     borderRadius: 6,
@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
   },
   button: {
     width: 52,
-    height: 52,
+    height: 58,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 6,
