@@ -16,6 +16,14 @@ export function ListTodo({
   onDelete: deleteTodo,
   onMarkAsComplete: markAsComplete,
 }: ListTodosProps) {
+  const todosCompleted = todos.reduce((accumulator, todo) => {
+    if (todo.isCompleted) {
+      accumulator++
+    }
+
+    return accumulator
+  }, 0);
+
   function handleDeleteTodo(id: string) {
     deleteTodo(id)
   }
@@ -30,13 +38,13 @@ export function ListTodo({
         <View style={styles.counterContainer}>
           <Text style={[styles.label, styles.labelCreated]}>Criadas</Text>
           <View style={styles.counter}>
-            <Text style={styles.counterValue}>0</Text>
+            <Text style={styles.counterValue}>{todos.length}</Text>
           </View>
         </View>
         <View style={styles.counterContainer}>
           <Text style={[styles.label, styles.labelCompleted]}>Concluídas</Text>
           <View style={styles.counter}>
-            <Text style={styles.counterValue}>0</Text>
+            <Text style={styles.counterValue}>{todosCompleted}</Text>
           </View>
         </View>
       </View>
